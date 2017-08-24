@@ -2,7 +2,7 @@
 name: bosh-gcp-mta
 
 releases:
-- name: postfix
+- name: bosh-gcp-mta
   version: latest 
 
 stemcells:
