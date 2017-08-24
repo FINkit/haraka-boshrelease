@@ -1,0 +1,6 @@
+---
+name: postfix
+dependencies: []
+files:
+- apt/postfix/profile.sh
+- apt/postfix/*.deb

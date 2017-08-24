@@ -1,0 +1,7 @@
+name: bosh-gcp-mta
+blobstore:
+    provider: s3
+    options:
+        host: storage.googleapis.com
+        port: 443
+        bucket_name: stuart-finkit-blobstore
