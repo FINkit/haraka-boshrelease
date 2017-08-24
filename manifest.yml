@@ -23,7 +23,7 @@ instance_groups:
   instances: 1
   jobs:
   - name: postfix
-    release: postfix
+    release: bosh-gcp-mta
     properties: {}
   vm_type: f1-micro
   stemcell: default
