@@ -1,6 +1,0 @@
----
-name: exim4-base
-dependencies: []
-files:
-- apt/exim4-base/profile.sh
-- apt/exim4-base/*.deb

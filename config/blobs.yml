@@ -1,8 +1,12 @@
-apt/postfix/postfix_2.11.0-1ubuntu1_amd64.deb:
-  size: 1084168
-  object_id: 7b12f734-711d-4d90-4163-17da2a4b4425
-  sha: a9ca8ae4d39c20d06d5ca04119994fea867fd6be
-apt/postfix/ssl-cert_1.0.33_all.deb:
-  size: 16650
-  object_id: 36936bb8-2e7b-400c-41a5-dfcea9971e05
-  sha: e2b01268291d438b7d457b5d3595c5b14e5400d1
+apt/exim4-base/exim4-base_4.82-3ubuntu2.3_amd64.deb:
+  size: 854248
+  object_id: d02b6282-aad5-45b7-63d7-e50773467eaf
+  sha: e09b180e77983b2bd63033f2c408ec2e57d033f4
+apt/exim4-base/exim4-config_4.82-3ubuntu2.3_all.deb:
+  size: 298442
+  object_id: fc2d75ad-31fe-4cbb-6669-4fdbbe531248
+  sha: aa1d2971efd292b41c46d67ca80822af12f28fb1
+apt/exim4-base/heirloom-mailx_12.5-2+deb7u1build0.14.04.1_amd64.deb:
+  size: 218800
+  object_id: 2f3e9575-c674-4755-47cc-e9ab43d6dd22
+  sha: 731397e3769471de88a6361d967fb230a8fdefa6

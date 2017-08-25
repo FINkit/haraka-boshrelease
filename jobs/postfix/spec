@@ -1,9 +1,0 @@
----
-name: postfix
-
-templates: {}
-
-packages:
-    - postfix
-
-properties: {}
