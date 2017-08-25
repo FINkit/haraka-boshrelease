@@ -8,15 +8,15 @@ set -o pipefail # return value of a pipeline is the value of the last (rightmost
 #   src/common/fetch_debs.sh postgresql src/apt/postgresql
 #
 PACKAGE_NAME=$1
-RELEASE_DIR=${RELEASE_DIR:-/vagrant}
+RELEASE_DIR="."
 if [[ "${2:-X}" == "X" ]]; then
     PACKAGE_SRC_DIR=$RELEASE_DIR/src/apt/$PACKAGE_NAME
 else
     PACKAGE_SRC_DIR=$RELEASE_DIR/$2
 fi
 APTFILE=$PACKAGE_SRC_DIR/aptfile
-APT_CACHE_DIR="$RELEASE_DIR/tmp/apt/cache/$PACKAGE_NAME"
-APT_STATE_DIR="$RELEASE_DIR/tmp/apt/state"
+APT_CACHE_DIR="/tmp/apt/cache/$PACKAGE_NAME"
+APT_STATE_DIR="/tmp/apt/state"
 BLOBS_DIR=$RELEASE_DIR/blobs/apt/$PACKAGE_NAME
 
 function error() {
