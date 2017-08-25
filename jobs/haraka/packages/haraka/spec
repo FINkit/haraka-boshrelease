@@ -1,0 +1,8 @@
+---
+name: haraka
+
+dependencies:
+    - node
+
+files:
+    - github.com/haraka/haraka/*

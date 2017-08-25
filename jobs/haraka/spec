@@ -1,0 +1,9 @@
+---
+name: haraka
+
+templates: {}
+
+packages:
+    - haraka
+
+properties: {}
