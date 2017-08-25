@@ -8,7 +8,7 @@ set -o pipefail # return value of a pipeline is the value of the last (rightmost
 #   src/common/fetch_debs.sh postgresql src/apt/postgresql
 #
 PACKAGE_NAME=$1
-RELEASE_DIR="."
+RELEASE_DIR=${RELEASE_DIR:-/vagrant}
 if [[ "${2:-X}" == "X" ]]; then
     PACKAGE_SRC_DIR=$RELEASE_DIR/src/apt/$PACKAGE_NAME
 else
@@ -68,6 +68,3 @@ done
 
 topic "Copying .debs to blobs"
 cp -a $APT_CACHE_DIR/archives/*.deb $BLOBS_DIR/
-
-rm -rf $APT_CACHE_DIR
-rm -rf $APT_STATE_DIR

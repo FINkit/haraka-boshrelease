@@ -7,12 +7,9 @@ set -u # report the usage of uninitialized variables
 
 mkdir -p $BOSH_INSTALL_TARGET/apt
 
-# Provide answers for the postfix post-install script
-debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Local only'"
-
-for DEB in $(ls -1 apt/postfix/*.deb); do
+for DEB in $(ls -1 apt/exim4-base/*.deb); do
   echo "Installing $(basename $DEB)"
   dpkg -x $DEB $BOSH_INSTALL_TARGET/apt
 done
 
-cp -a apt/postfix/profile.sh $BOSH_INSTALL_TARGET/
+cp -a apt/exim4-base/profile.sh $BOSH_INSTALL_TARGET/
