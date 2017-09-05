@@ -1,8 +1,8 @@
 ---
-name: bosh-gcp-mta
+name: bosh-haraka
 
 releases:
-- name: bosh-gcp-mta
+- name: bosh-haraka
   version: latest 
 
 stemcells:
@@ -22,8 +22,8 @@ instance_groups:
   - z1
   instances: 1
   jobs:
-  - name: postfix
-    release: bosh-gcp-mta
+  - name: haraka
+    release: bosh-haraka
     properties: {}
   vm_type: f1-micro
   stemcell: default
