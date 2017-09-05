@@ -13,3 +13,8 @@ for DEB in $(ls -1 apt/npm/*.deb); do
 done
 
 cp -a apt/npm/profile.sh $BOSH_INSTALL_TARGET/
+
+sed -i 's/\/usr\/bin\/nodejs/\/usr\/bin\/env nodejs/g' $BOSH_INSTALL_TARGET/apt/usr/share/npm/bin/npm-cli.js
+
+sudo ln -s $BOSH_INSTALL_TARGET/apt/usr/lib/nodejs /usr/lib/nodejs
+sudo ln -s $BOSH_INSTALL_TARGET/apt/usr/share/npm /usr/share/npm
