@@ -1,4 +1,4 @@
-name: bosh-gcp-mta
+name: bosh-haraka
 blobstore:
     provider: s3
     options:
