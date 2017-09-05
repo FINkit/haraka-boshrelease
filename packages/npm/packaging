@@ -18,3 +18,4 @@ sed -i 's/\/usr\/bin\/nodejs/\/usr\/bin\/env nodejs/g' $BOSH_INSTALL_TARGET/apt/
 
 sudo ln -s $BOSH_INSTALL_TARGET/apt/usr/lib/nodejs /usr/lib/nodejs
 sudo ln -s $BOSH_INSTALL_TARGET/apt/usr/share/npm /usr/share/npm
+sudo ln -s $BOSH_INSTALL_TARGET/apt/usr/share/node-mime /usr/share/node-mime
