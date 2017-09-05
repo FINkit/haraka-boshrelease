@@ -2,7 +2,7 @@
 name: haraka
 
 dependencies:
-    - node
+    - npm
 
 files:
     - github.com/haraka/haraka/*
