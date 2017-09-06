@@ -8,3 +8,4 @@ set -u # report the usage of uninitialized variables
 cp -a $BOSH_COMPILE_TARGET/github.com/haraka/haraka/* $BOSH_INSTALL_TARGET
 
 cd $BOSH_INSTALL_TARGET
+sudo npm install
