@@ -6,7 +6,7 @@ set -u # report the usage of uninitialized variables
 # $BOSH_INSTALL_TARGET - where you copy/install files to be included in package
 
 NODE_VERSION="6.11.3"
-ARCHIVE="node${6.11.3}-linux-x64.tar.xz"
+ARCHIVE="node-v${NODE_VERSION}-linux-x64.tar.xz"
 
 mv ${BOSH_COMPILE_TARGET}/node/${ARCHIVE} ${BOSH_INSTALL_TARGET}
 cd ${BOSH_INSTALL_TARGET}
