@@ -7,7 +7,7 @@ set -u # report the usage of uninitialized variables
 
 PATH=${PATH}:/var/vcap/packages/node/bin/
 
-mv $BOSH_COMPILE_TARGET/github.com/haraka/haraka/ $BOSH_INSTALL_TARGET
+mv -f -T $BOSH_COMPILE_TARGET/github.com/haraka/haraka/ $BOSH_INSTALL_TARGET
 
 cd $BOSH_INSTALL_TARGET
 sudo npm install
