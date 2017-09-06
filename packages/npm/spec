@@ -1,6 +1,0 @@
----
-name: npm
-dependencies: []
-files:
-- apt/npm/profile.sh
-- apt/npm/*.deb

@@ -1,0 +1,7 @@
+---
+name: node
+
+dependencies: []
+
+files:
+    - node/node-v6.11.3-linux-x64.tar.xz

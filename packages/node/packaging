@@ -5,6 +5,9 @@ set -u # report the usage of uninitialized variables
 # $BOSH_COMPILE_TARGET - where this package & spec'd source files are available
 # $BOSH_INSTALL_TARGET - where you copy/install files to be included in package
 
-cp -a $BOSH_COMPILE_TARGET/github.com/haraka/haraka/ $BOSH_INSTALL_TARGET
+NODE_VERSION="6.11.3"
+ARCHIVE="node${6.11.3}-linux-x64.tar.xz"
 
-cd $BOSH_INSTALL_TARGET
+mv ${BOSH_COMPILE_TARGET}/node/${ARCHIVE} ${BOSH_INSTALL_TARGET}
+cd ${BOSH_INSTALL_TARGET}
+tar xf ${ARCHIVE}

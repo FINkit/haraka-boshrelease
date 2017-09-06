@@ -5,6 +5,6 @@ templates: {}
 
 packages:
     - haraka
-    - npm
+    - node
 
 properties: {}
