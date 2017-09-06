@@ -10,4 +10,4 @@ ARCHIVE="node-v${NODE_VERSION}-linux-x64.tar.xz"
 
 mv ${BOSH_COMPILE_TARGET}/node/${ARCHIVE} ${BOSH_INSTALL_TARGET}
 cd ${BOSH_INSTALL_TARGET}
-tar xf ${ARCHIVE}
+tar xf ${ARCHIVE} -C ${BOSH_INSTALL_TARGET} --strip-components=1
