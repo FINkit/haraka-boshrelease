@@ -5,6 +5,6 @@ set -u # report the usage of uninitialized variables
 # $BOSH_COMPILE_TARGET - where this package & spec'd source files are available
 # $BOSH_INSTALL_TARGET - where you copy/install files to be included in package
 
-cp -a $BOSH_COMPILE_TARGET/github.com/haraka/haraka/ $BOSH_INSTALL_TARGET
+cp -a $BOSH_COMPILE_TARGET/github.com/haraka/haraka/* $BOSH_INSTALL_TARGET
 
 cd $BOSH_INSTALL_TARGET
