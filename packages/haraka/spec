@@ -5,4 +5,4 @@ dependencies:
     - node
 
 files:
-    - github.com/haraka/haraka/
+    - github.com/haraka/haraka/**/*
