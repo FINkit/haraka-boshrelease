@@ -12,7 +12,7 @@ PATH=${PATH}:/var/vcap/packages/node/bin
 for FILE in smtp.ini smtp_forward.ini
 do
     rm -rf ${PKG_DIR}/config/${FILE}
-    ln -s /var/vcap/jobs/${JOB}/config/${FILE}
+    ln -s /var/vcap/jobs/${JOB}/config/${FILE} ${PKG_DIR}/config/${FILE}
 done
 
 case ${1} in
