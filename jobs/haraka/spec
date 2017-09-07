@@ -2,7 +2,7 @@
 name: haraka
 
 templates:
-  bin/haraka_ctl: bin/haraka_ctl:
+  bin/haraka_ctl: bin/haraka_ctl
   config/smtp.ini: packages/haraka/config/smtp.ini
   config/smtp_forward.ini: packages/haraka/config/smtp_forward.ini
 
