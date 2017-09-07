@@ -12,30 +12,30 @@ packages:
 
 properties:
   haraka.smtp_forward.host:
-    description: SMTP Host to forward all mail to
+    description: "SMTP Host to forward all mail to"
     default: smtp.sendgrid.net
   haraka.smtp_forward.port:
-    description: SMTP Port to forward all mail to
+    description: "SMTP Port to forward all mail to"
     default: 587
   haraka.smtp_forward.enable_tls:
-    description: TLS enabled (true)or disabled (false) for outgoing mail
+    description: "TLS enabled (true)or disabled (false) for outgoing mail"
     default: true
-  haraka.smtp_forward.auth_type
-    description: SMTP Client authorisation [plain|login]
+  haraka.smtp_forward.auth_type:
+    description: "SMTP Client authorisation [plain|login]"
     default: plain
-  haraka.smtp_forward.auth_user
-    description: SMTP Client auth username (only used when auth_type=login)
-  haraka.smtp_forward.auth_pass
-    description: SMTP Client auth password (only used when auth_type=login)
-  haraka.smtp.nodes
-    description: Number of processes. 0=clustering disabled. cpus=1 fork per cpu
+  haraka.smtp_forward.auth_user:
+    description: "SMTP Client auth username (only used when auth_type=login)"
+  haraka.smtp_forward.auth_pass:
+    description: "SMTP Client auth password (only used when auth_type=login)"
+  haraka.smtp.nodes:
+    description: "Number of processes. 0=clustering disabled. cpus=1 fork per cpu"
     default: cpus
-  haraka.smtp.daemonize
-    description: Fork into background at startup
+  haraka.smtp.daemonize:
+    description: "Fork into background at startup"
     default: true
-  haraka.smtp.daemon_log_file
-    description: Haraka log file
+  haraka.smtp.daemon_log_file:
+    description: "Haraka log file"
     default: /var/vcap/sys/log/haraka/haraka.log
-  haraka.smtp.daemon_pid_file
-    description: Haraka pid file
+  haraka.smtp.daemon_pid_file:
+    description: "Haraka pid file"
     default: /var/vcap/sys/pid/haraka/haraka.pid
