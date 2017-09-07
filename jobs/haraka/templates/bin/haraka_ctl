@@ -22,7 +22,7 @@ case ${1} in
 
         cd ${PKG_DIR}
 
-		node haraka.js
+        node haraka.js
 
         ;;
     stop)
