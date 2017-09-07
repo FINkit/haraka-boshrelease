@@ -14,3 +14,5 @@ mv $BOSH_COMPILE_TARGET/github.com/haraka/haraka/* .
 
 # Download required modules from https://www.npmjs.org/package/
 sudo npm install
+
+chown vcap:vcap -R .
