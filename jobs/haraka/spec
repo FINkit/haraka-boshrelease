@@ -41,3 +41,6 @@ properties:
   haraka.smtp.daemon_pid_file:
     description: "Haraka pid file"
     default: /var/vcap/sys/run/haraka/haraka.pid
+  haraka.smtp.listen:
+    description: "IP and Port that Haraka listens on"
+    default: 0.0.0.0:25
