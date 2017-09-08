@@ -19,7 +19,7 @@ done
 case ${1} in
     start)
         mkdir -p ${RUN_DIR} ${LOG_DIR} ${QUEUE_DIR}
-        chown -R ${USER}:${USER} ${RUN_DIR} ${LOG_DIR} ${QUEUE_DIR}
+        chown -R ${USER}:${USER} ${RUN_DIR} ${LOG_DIR} ${PKGDIR}
 
         cd ${PKG_DIR}
 
