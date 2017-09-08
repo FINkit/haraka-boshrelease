@@ -10,7 +10,7 @@ PIDFILE=${RUN_DIR}/haraka.pid
 PATH=${PATH}:/var/vcap/packages/node/bin
 
 # This seems horrible - there must be a better way of solving this problem
-for FILE in smtp.ini smtp_forward.ini
+for FILE in `ls -1 /var/vcap/jobs/${JOB}/config/`
 do
     sudo rm -rf ${PKG_DIR}/config/${FILE}
     sudo ln -s /var/vcap/jobs/${JOB}/config/${FILE} ${PKG_DIR}/config/${FILE}
@@ -27,7 +27,7 @@ case ${1} in
 
         ;;
     stop)
-        sudo kill -9 `cat ${PIDFILE} && rm -rf ${PIDFILE}`
+        sudo kill -9 `cat ${PIDFILE} && sudo rm -rf ${PIDFILE}`
         ;;
     *)
         echo "Usage: ctl {start|stop}"

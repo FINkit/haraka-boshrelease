@@ -5,6 +5,8 @@ templates:
   bin/haraka_ctl: bin/haraka_ctl
   config/smtp.ini: config/smtp.ini
   config/smtp_forward.ini: config/smtp_forward.ini
+  config/relay.ini: config/relay.ini
+  config/relay_acl_allow: config/relay_acl_allow
 
 packages:
   - haraka
