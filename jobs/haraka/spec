@@ -40,4 +40,4 @@ properties:
     default: /var/vcap/sys/log/haraka/haraka.log
   haraka.smtp.daemon_pid_file:
     description: "Haraka pid file"
-    default: /var/vcap/sys/pid/haraka/haraka.pid
+    default: /var/vcap/sys/run/haraka/haraka.pid

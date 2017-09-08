@@ -6,7 +6,7 @@ RUN_DIR=/var/vcap/sys/run/${JOB}
 LOG_DIR=/var/vcap/sys/log/${JOB}
 PKG_DIR=/var/vcap/packages/${JOB}
 QUEUE_DIR=${PKG_DIR}/queue
-PIDFILE=${RUN_DIR}/pid
+PIDFILE=${RUN_DIR}/haraka.pid
 PATH=${PATH}:/var/vcap/packages/node/bin
 
 # This seems horrible - there must be a better way of solving this problem
