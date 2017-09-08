@@ -1,0 +1,5 @@
+check process haraka
+  with pidfile /var/vcap/sys/run/haraka/haraka.pid
+  start program "/var/vcap/jobs/haraka/bin/haraka_ctl start"
+  stop program "/var/vcap/jobs/haraka/bin/haraka_ctl stop"
+  group vcap
