@@ -7,6 +7,7 @@ templates:
   config/smtp_forward.ini: config/smtp_forward.ini
   config/relay.ini: config/relay.ini
   config/relay_acl_allow: config/relay_acl_allow
+  config/plugins: config/plugins
 
 packages:
   - haraka
