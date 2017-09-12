@@ -14,4 +14,4 @@ git submodule update -i
 bosh ucc bosh-cloud-configs/gcp/europe-west2.yml
 bosh create-release
 bosh upload-release
-bosh deploy -d bosh-haraka manifest.yml
+bosh deploy -d bosh-haraka haraka.yml
