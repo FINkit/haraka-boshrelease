@@ -19,7 +19,7 @@ properties:
     default: smtp.sendgrid.net
   haraka.smtp_forward.port:
     description: "SMTP Port to forward all mail to"
-    default: 587
+    default: 2525
   haraka.smtp_forward.enable_tls:
     description: "TLS enabled (true)or disabled (false) for outgoing mail"
     default: true
@@ -28,10 +28,10 @@ properties:
     default: plain
   haraka.smtp_forward.auth_user:
     description: "SMTP Client auth username (only used when auth_type=login)"
-    default: someusername
+    default: ((smtp_username))
   haraka.smtp_forward.auth_pass:
     description: "SMTP Client auth password (only used when auth_type=login)"
-    default: somepassword
+    default: ((smtp_password))
   haraka.smtp.nodes:
     description: "Number of processes. 0=clustering disabled. cpus=1 fork per cpu"
     default: cpus

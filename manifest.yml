@@ -1,6 +1,12 @@
 ---
 name: bosh-haraka
 
+variables:
+- name: smtp_username
+  type: password
+- name: smtp_password
+  type: password
+
 releases:
 - name: bosh-haraka
   version: latest 
