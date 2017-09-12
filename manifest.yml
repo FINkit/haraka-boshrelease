@@ -30,7 +30,10 @@ instance_groups:
   jobs:
   - name: haraka
     release: bosh-haraka
-    properties: {}
+    properties:
+        haraka:
+            smtp_username: ((smtp_username))
+            smtp_password: ((smtp_password))
   vm_type: f1-micro
   stemcell: default
   networks:
