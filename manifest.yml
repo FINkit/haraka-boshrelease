@@ -2,9 +2,9 @@
 name: bosh-haraka
 
 variables:
-- name: smtp_username
+- name: haraka_smtp_forward_auth_user
   type: password
-- name: smtp_password
+- name: haraka_smtp_forward_auth_pass
   type: password
 
 releases:
@@ -32,8 +32,9 @@ instance_groups:
     release: bosh-haraka
     properties:
         haraka:
-            smtp_username: ((smtp_username))
-            smtp_password: ((smtp_password))
+            smtp_forward:
+                auth_user: ((haraka_smtp_forward_auth_user))
+                auth_pass: ((haraka_smtp_forward_auth_pass))
   vm_type: f1-micro
   stemcell: default
   networks:

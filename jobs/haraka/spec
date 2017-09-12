@@ -25,7 +25,7 @@ properties:
     default: true
   haraka.smtp_forward.auth_type:
     description: "SMTP Client authorisation [plain|login]"
-    default: plain
+    default: login
   haraka.smtp_forward.auth_user:
     description: "SMTP Client auth username (only used when auth_type=login)"
     default: ((smtp_username))
