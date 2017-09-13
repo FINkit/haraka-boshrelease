@@ -1,6 +1,3 @@
-[submodule "bosh-cloud-configs"]
-	path = bosh-cloud-configs
-	url = https://github.com/migs/bosh-cloud-configs.git
 [submodule "src/github.com/haraka/haraka"]
 	path = src/github.com/haraka/haraka
 	url = https://github.com/haraka/Haraka.git
