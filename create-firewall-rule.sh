@@ -2,6 +2,9 @@
 # Requires `gcloud version` to be at least 168.0.0
 #gcloud compute firewall-rules create nat-to-sendgrid --target-tags nat --direction egress --allow tcp:2525 --network bosh --destination-ranges 159.122.224.196,159.122.224.197
 
+set +e
+set +x
+
 GCP_ZONE=$(gcloud config get-value compute/zone 2>/dev/null)
 GCP_REGION=$(gcloud config get-value compute/region 2>/dev/null)
 GCP_PROJECT=$(gcloud config get-value project 2>/dev/null)
