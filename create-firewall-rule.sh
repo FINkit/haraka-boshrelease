@@ -5,17 +5,24 @@
 set -e
 set -x
 
-zone=$(gcloud config get-value compute/zone 2>/dev/null)
-region=$(gcloud config get-value compute/region 2>/dev/null)
-projectid=$(gcloud config get-value project 2>/dev/null)
-baseip=10.0.0.0
-service_account_email="bosh-user@${projectid}.iam.gserviceaccount.com"
-bosh_cli_version="2.0.28"
+GCP_ZONE=$(gcloud config get-value compute/zone 2>/dev/null)
+GCP_REGION=$(gcloud config get-value compute/region 2>/dev/null)
+GCP_PROJECT=$(gcloud config get-value project 2>/dev/null)
+GCP_BASE_IP=10.0.0.0
+GCP_SERVICE_ACCOUNT="bosh-user@${GCP_PROJECT}.iam.gserviceaccount.com"
+GCP_APIS_TO_ENABLE=("compute.googleapis.com" "iam.googleapis.com" "cloudresourcemanager.googleapis.com" "dns.googleapis.com")
+BOSH_CLI_VERSION="2.0.28"
 
-export GOOGLE_CREDENTIALS=$(cat ~/${service_account_email}.key.json)
+export GOOGLE_CREDENTIALS=$(cat ~/${GCP_SERVICE_ACCOUNT}.key.json)
 
 cd terraform
 if [[ ! -d ".terraform" ]]; then
     terraform init
 fi
-terraform apply
+terraform apply \
+    -var service_account_email="${GCP_SERVICE_ACCOUNT}@${GCP_PROJECT}.iam.gserviceaccount.com" \
+    -var projectid=${GCP_PROJECT} \
+    -var region=${GCP_REGION} \
+    -var zone=${GCP_ZONE} \
+    -var baseip=${GCP_BASE_IP} \
+    -var bosh_cli_version=${BOSH_CLI_VERSION}
