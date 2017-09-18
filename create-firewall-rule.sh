@@ -12,7 +12,7 @@ BOSH_CLI_VERSION="2.0.28"
 
 export GOOGLE_CREDENTIALS=$(cat ~/${GCP_SERVICE_ACCOUNT}.key.json)
 
-docker run -i -t \
+sudo docker run -i -t \
   -e "GOOGLE_CREDENTIALS=${GOOGLE_CREDENTIALS}" \
   -v `pwd`/terraform:/$(basename `pwd`) \
   -w /$(basename `pwd`) \
