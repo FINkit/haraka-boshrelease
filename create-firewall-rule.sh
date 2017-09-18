@@ -14,13 +14,8 @@ bosh_cli_version="2.0.28"
 
 export GOOGLE_CREDENTIALS=$(cat ~/${GCP_SERVICE_ACCOUNT}.key.json)
 
-sudo docker run -i -t \
-  -e "GOOGLE_CREDENTIALS=${GOOGLE_CREDENTIALS}" \
-  -v `pwd`/terraform:/$(basename `pwd`) \
-  -w /$(basename `pwd`) \
-  hashicorp/terraform:full apply \
-    -var service_account_email="${GCP_SERVICE_ACCOUNT}@${GCP_PROJECT}.iam.gserviceaccount.com" \
-    -var projectid=${GCP_PROJECT} \
-    -var region=${GCP_REGION} \
-    -var baseip=${GCP_BASE_IP} \
-    -var bosh_cli_version=${BOSH_CLI_VERSION}
+cd terraform
+if [[ ! -d "./plugins" ]] then
+    terraform init
+fi
+terraform apply
