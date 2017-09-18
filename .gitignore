@@ -14,3 +14,4 @@ releases/**/*.tgz
 #*
 *.tgz
 haraka-secrets.yml
+./terraform/.terraform
