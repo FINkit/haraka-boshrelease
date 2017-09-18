@@ -27,7 +27,7 @@ resource "google_compute_firewall" "nat-to-sendgrid" {
 
   direction = "EGRESS"
 
-  destination_ranges "159.122.224.196/32, 159.122.224.197/32"
+  destination_ranges = "159.122.224.196/32, 159.122.224.197/32"
 
   allow {
     protocol = "tcp"
