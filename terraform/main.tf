@@ -1,3 +1,7 @@
+variable "projectid" {
+    type = "string"
+}
+
 variable "prefix" {
     type = "string"
     default = ""
