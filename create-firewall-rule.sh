@@ -7,12 +7,12 @@ set +x
 
 zone=$(gcloud config get-value compute/zone 2>/dev/null)
 region=$(gcloud config get-value compute/region 2>/dev/null)
-project=$(gcloud config get-value project 2>/dev/null)
+projectid=$(gcloud config get-value project 2>/dev/null)
 baseip=10.0.0.0
-service_account_email="bosh-user@${GCP_PROJECT}.iam.gserviceaccount.com"
+service_account_email="bosh-user@${projectid}.iam.gserviceaccount.com"
 bosh_cli_version="2.0.28"
 
-export GOOGLE_CREDENTIALS=$(cat ~/${GCP_SERVICE_ACCOUNT}.key.json)
+export GOOGLE_CREDENTIALS=$(cat ~/${service_account_email}.key.json)
 
 cd terraform
 if [[ ! -d "./plugins" ]]; then
