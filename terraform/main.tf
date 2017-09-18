@@ -12,6 +12,11 @@ variable "region" {
     default = "europe-west2"
 }
 
+variable "destination_ranges" {
+    type = "list"
+    default = ["159.122.224.196/32, 159.122.224.197/32"]
+}
+
 provider "google" {
     project = "${var.projectid}"
     region = "${var.region}"
@@ -27,7 +32,7 @@ resource "google_compute_firewall" "nat-to-sendgrid" {
 
   direction = "EGRESS"
 
-  destination_ranges = "159.122.224.196/32, 159.122.224.197/32"
+  destination_ranges = ["159.122.224.196/32, 159.122.224.197/32"]
 
   allow {
     protocol = "tcp"
