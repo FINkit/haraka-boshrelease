@@ -15,7 +15,7 @@ bosh_cli_version="2.0.28"
 export GOOGLE_CREDENTIALS=$(cat ~/${GCP_SERVICE_ACCOUNT}.key.json)
 
 cd terraform
-if [[ ! -d "./plugins" ]] then
+if [[ ! -d "./plugins" ]]; then
     terraform init
 fi
 terraform apply
