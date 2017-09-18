@@ -1,3 +1,22 @@
+variable "prefix" {
+    type = "string"
+    default = ""
+}
+
+variable "region" {
+    type = "string"
+    default = "europe-west2"
+}
+
+provider "google" {
+    project = "${var.projectid}"
+    region = "${var.region}"
+}
+
+resource "google_compute_network" "bosh" {
+  name       = "${var.prefix}bosh"
+}
+
 resource "google_compute_firewall" "nat-to-sendgrid" {
   name    = "${var.prefix}nat-to-sendgrid"
   network = "${google_compute_network.bosh.name}"
@@ -13,3 +32,4 @@ resource "google_compute_firewall" "nat-to-sendgrid" {
 
   target_tags = ["nat"]
 }
+
