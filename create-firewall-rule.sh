@@ -16,9 +16,19 @@ BOSH_CLI_VERSION="2.0.28"
 export GOOGLE_CREDENTIALS=$(cat ~/${GCP_SERVICE_ACCOUNT}.key.json)
 
 cd terraform
+
 if [[ ! -d ".terraform" ]]; then
     terraform init
 fi
+
+terraform plan \
+    -var service_account_email="${GCP_SERVICE_ACCOUNT}@${GCP_PROJECT}.iam.gserviceaccount.com" \
+    -var projectid=${GCP_PROJECT} \
+    -var region=${GCP_REGION} \
+    -var zone=${GCP_ZONE} \
+    -var baseip=${GCP_BASE_IP} \
+    -var bosh_cli_version=${BOSH_CLI_VERSION}
+
 terraform apply \
     -var service_account_email="${GCP_SERVICE_ACCOUNT}@${GCP_PROJECT}.iam.gserviceaccount.com" \
     -var projectid=${GCP_PROJECT} \
