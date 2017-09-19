@@ -1,4 +1,5 @@
 resource "google_compute_firewall" "nat-to-sendgrid" {
+  depends_on = ["google_compute_network.bosh"]
   name    = "${var.prefix}nat-to-sendgrid"
   network = "${google_compute_network.bosh.name}"
 
