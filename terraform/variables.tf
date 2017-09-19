@@ -1,0 +1,2 @@
+variable "projectid" {}
+variable "prefix" {}
