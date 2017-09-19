@@ -1,6 +1,6 @@
 resource "google_compute_firewall" "nat-to-sendgrid" {
   name    = "${var.prefix}nat-to-sendgrid"
-  network = "${google_compute_network.bosh.name}"
+  network = "${var.network}"
 
   direction = "EGRESS"
 
