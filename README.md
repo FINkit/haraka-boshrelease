@@ -8,7 +8,7 @@ https://haraka.github.io/README.html
 
 1. You are using GCP
 2. You are using Sendgrid as your upstream mail relay.
-3. You ackknowledge that the only check for relaying is that the client is connecting from 10.0.0.0/8
+3. You acknowledge that the only check for relaying is that the client is connecting from 10.0.0.0/8
 
 ## Prepare workspace
 
