@@ -41,18 +41,4 @@ bosh deploy -d bosh-haraka --recreate --vars-file=haraka-secrets.yml haraka.yml
 
 ## Firewall Rules
 
-**TODO: Put this into Terraform**
-
-A firewall rule must be created to allow the MTA reach Sendgrid.
-
-To create the firewall rule:
-
-```
-./create-firewall-rule.sh
-```
-
-To delete the firewall rule:
-
-```
-./delete-firewall-rule.sh
-```
+This release will need to reach the sendgrid (or some other smarthost), which will require the appropriate firewall rules to be configured. See `terraform/README.md` for a terraform module that can be included in your own terraform scripts.
