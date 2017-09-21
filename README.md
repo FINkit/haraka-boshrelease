@@ -1,4 +1,6 @@
-## Bosh-Haraka
+# Bosh-Haraka
+
+[![Build Status](https://travis-ci.org/FINkit/haraka-boshrelease.svg?branch=master)](https://travis-ci.org/FINkit/haraka-boshrelease)
 
 https://haraka.github.io/README.html
 
