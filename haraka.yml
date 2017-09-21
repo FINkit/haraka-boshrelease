@@ -1,5 +1,5 @@
 ---
-name: bosh-haraka
+name: haraka-boshrelease
 
 variables:
 - name: haraka_smtp_forward_auth_user
@@ -8,7 +8,7 @@ variables:
   type: password
 
 releases:
-- name: bosh-haraka
+- name: haraka-boshrelease
   version: latest 
 
 stemcells:
@@ -29,7 +29,7 @@ instance_groups:
   instances: 1
   jobs:
   - name: haraka
-    release: bosh-haraka
+    release: haraka-boshrelease
     properties:
         haraka:
             smtp_forward:
