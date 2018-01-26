@@ -1,4 +1,4 @@
-node/node-v8.9.4-linux-x64.tar.xz:
-  size: 11410120
-  object_id: 6d330b38-4302-45fe-67e7-d0ec30a1917b
-  sha: 6308fe6d2202f7d3e3bab5803a9a9f5f4650e3e0
+node/node-v6.11.3-linux-x64.tar.xz:
+  size: 9356032
+  object_id: 5c2d8ac6-1fd2-4205-52f3-4764c5267e16
+  sha: ffb03a2f2c4caefe6ce6c535598a3a299ca4a5a7
