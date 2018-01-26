@@ -14,7 +14,7 @@ https://haraka.github.io/README.html
 
 ```
 bosh upload-stemcell https://bosh.io/d/stemcells/bosh-google-kvm-ubuntu-trusty-go_agent
-git clone https://github.com/FINkit/haraka-boshrelese.git
+git clone https://github.com/FINkit/haraka-boshrelease.git
 cd haraka-boshrelease
 git submodule update -i
 ```
