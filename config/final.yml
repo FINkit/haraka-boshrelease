@@ -4,4 +4,4 @@ blobstore:
     options:
         host: storage.googleapis.com
         port: 443
-        bucket_name: stuart-finkit-blobstore
+        bucket_name: finkit-blobstore
